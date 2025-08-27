@@ -1,247 +1,64 @@
-//Wed Aug 27 2025 09:59:44 GMT+0000 (Coordinated Universal Time)
+//Wed Aug 27 2025 10:32:26 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-const _0x47fa30 = {
-  isQX: typeof $task !== "undefined",
-  isLoon: typeof $loon !== "undefined",
-  isSurge: typeof $httpClient !== "undefined" && typeof $loon === "undefined"
-};
-function log(_0x3c7bd9) {
-  console.log("波点音乐VIP: " + _0x3c7bd9);
-}
-function done(_0x10938f = {}) {
-  if (typeof $done !== "undefined") {
-    $done(_0x10938f);
-  }
-}
-typeof $response !== "undefined" ? main() : done();
-function main() {
-  const _0x6b395b = function () {
-    let _0x2f9021 = true;
-    return function (_0x984337, _0x4a5dd6) {
-      const _0x31a616 = _0x2f9021 ? function () {
-        if (_0x4a5dd6) {
-          const _0x548ab0 = _0x4a5dd6.apply(_0x984337, arguments);
-          _0x4a5dd6 = null;
-          return _0x548ab0;
+var encode_version = "jsjiami.com.v5";
+var _0x6cbacf = $request.headers;
+_0x6cbacf.cookie = "MUSIC_U=00C9610D4E969926FA2513F7B324A9031F128BDA1073A2AEE61F37F42A038B511A2537B2D15757F9D3D53098AD04266F63B29BE102A4A1268DCA3EBC667570EA093E09CCA5C132472FABF1BC5E1B3C15828448B580EBC82E2C503C96590C5840C2212777D84204C7C2569EFFE16D738BC6C413A2F383F3098E31A4A0E3BC19A9FBA217D7BBB0CB3A09050DE13334AB04B5DCB651F19E9CAF67C6F9A25B5DC0258A403B11DED5E4C469ACC0968847CC20F9BE7902837FF2884D8BD741F2F03E28E2B8B37C72E02A5355F5017FC95937EA3B443292A631037C2C20B9C2C4D9BDD1F1E39B603B497D20917F854A95634BEC73BA6DD09AC255CA31CFE41820F6B1E22E9F2228EF7003A7DF0FDC626A4C12E14F4D594BF4CBCD2FF84591E5B87FC50DBDF4B125A1E8F61651ACEBC74C649CF55A8C31B9E61A7BDEDB4AFFBFDE149C9A52CF00A0A9DF5DFB30811942563FDD2147114831657C4D698EED3E8B504F7A4B8D;appver=9.3.25; deviceId=5664b3c08da1d786701cc1a79279c035; os=iPhone OS; osver=16.2; machineid=iPhone13.4; ";
+_0x6cbacf["user-agent"] = "NeteaseMusic 9.3.25/6062 (iPhone; iOS 16.6; zh-Hans_TW)";
+_0x6cbacf["mconfig-Info"] = "{\"zr4bw6pKFDIZScpo\":{\"version\":3061824,\"appver\":\"9.3.25\"},\"tPJJnts2H31BZXmp\":{\"version\":3973120,\"appver\":\"2.0.30\"},\"c0Ve6C0uNl2Am0Rl\":{\"version\":600064,\"appver\":\"1.7.50\"},\"IuRPVVmc3WWul9fT\":{\"version\":92171072,\"appver\":\"9.3.25\"}}";
+$done({
+  headers: _0x6cbacf
+});
+(function (_0x6e2f39, _0x54a727, _0x334f95) {
+  var _0x56818f = function () {
+    var _0x4341af = true;
+    return function (_0x426550, _0x441b1f) {
+      var _0x58fc72 = _0x4341af ? function () {
+        if (_0x441b1f) {
+          var _0x54e54f = _0x441b1f.apply(_0x426550, arguments);
+          _0x441b1f = null;
+          return _0x54e54f;
         }
       } : function () {};
-      _0x2f9021 = false;
-      return _0x31a616;
+      _0x4341af = false;
+      return _0x58fc72;
     };
   }();
-  const _0x17b3f5 = _0x6b395b(this, function () {
-    const _0x54a97f = typeof window !== "undefined" ? window : typeof process === "object" && typeof require === "function" && typeof global === "object" ? global : this,
-      _0x115d50 = function () {
-        const _0x4e80df = new _0x54a97f.RegExp("^([^ ]+( +[^ ]+)+)+[^ ]}");
-        return !_0x4e80df.test(_0x17b3f5);
-      };
-    return _0x115d50();
-  });
-  _0x17b3f5();
-  const _0xac4459 = $request?.["url"] || "";
-  try {
-    if (_0xac4459.includes("/api/ucenter/users/pub")) {
-      handleUserInfo();
+  var _0x2bd5ab = _0x56818f(this, function () {
+    var _0x230f55 = function () {};
+    var _0x41c4b7 = typeof window !== "undefined" ? window : typeof process === "object" && typeof require === "function" && typeof global === "object" ? global : this;
+    if (!_0x41c4b7.console) {
+      _0x41c4b7.console = function (_0x2fdd4e) {
+        var _0x334f95 = {};
+        _0x334f95.log = _0x2fdd4e;
+        _0x334f95.warn = _0x2fdd4e;
+        _0x334f95.debug = _0x2fdd4e;
+        _0x334f95.info = _0x2fdd4e;
+        _0x334f95.error = _0x2fdd4e;
+        _0x334f95.exception = _0x2fdd4e;
+        _0x334f95.trace = _0x2fdd4e;
+        return _0x334f95;
+      }(_0x230f55);
     } else {
-      if (_0xac4459.includes("/api/play/music/v2/audioUrl")) {
-        handleAudioUrl();
-      } else {
-        if (_0xac4459.includes("/api/play/music/v2/checkRight")) {
-          handleCheckRight();
-        } else {
-          if (_0xac4459.includes("/api/service/home/module")) {
-            handleHomeModule();
-          } else {
-            if (_0xac4459.includes("/api/pay/vip/lowPriceText")) {
-              handleVipPrice();
-            } else {
-              done();
-            }
-          }
-        }
-      }
+      _0x41c4b7.console.log = _0x230f55;
+      _0x41c4b7.console.warn = _0x230f55;
+      _0x41c4b7.console.debug = _0x230f55;
+      _0x41c4b7.console.info = _0x230f55;
+      _0x41c4b7.console.error = _0x230f55;
+      _0x41c4b7.console.exception = _0x230f55;
+      _0x41c4b7.console.trace = _0x230f55;
     }
-  } catch (_0x4bd127) {
-    done();
-  }
-}
-function handleCheckRight() {
+  });
+  _0x2bd5ab();
+  _0x334f95 = "al";
   try {
-    const _0x1a0c82 = {
-      status: 4
-    };
-    const _0x54a076 = {
-      code: 200,
-      reqId: generateRandomId(32),
-      data: _0x1a0c82,
-      msg: "success",
-      profileId: "site",
-      curTime: Date.now()
-    };
-    done({
-      body: JSON.stringify(_0x54a076)
-    });
-  } catch (_0x42632a) {
-    done();
-  }
-}
-function handleUserInfo() {
-  let _0x5b6383 = safeJsonParse($response.body);
-  if (!_0x5b6383) {
-    done();
-    return;
-  }
-  _0x5b6383.data = _0x5b6383.data || {};
-  _0x5b6383.data.payInfo = _0x5b6383.data.payInfo || {};
-  _0x5b6383.data.userInfo = _0x5b6383.data.userInfo || {};
-  const _0x4e70a9 = {
-    isVip: 1,
-    isVipBoolean: true,
-    vipType: 1,
-    payVipType: 1,
-    expireDate: 4102416000000,
-    isPayVipBoolean: true,
-    isBigVipBoolean: true,
-    bigExpireDate: 4102416000000,
-    ctExpireDate: 4102416000000,
-    actExpireDate: 4102416000000,
-    payExpireDate: 4102416000000
-  };
-  Object.assign(_0x5b6383.data.payInfo, _0x4e70a9);
-  const _0x4b9a14 = {
-    vipType: 1,
-    authType: 1,
-    isVip: 1,
-    payVipType: 1,
-    nickname: "https://t.me/GieGie777"
-  };
-  Object.assign(_0x5b6383.data.userInfo, _0x4b9a14);
-  done({
-    body: JSON.stringify(_0x5b6383)
-  });
-}
-function handleAudioUrl() {
-  const _0x2f9b90 = getUrlParam($request.url, "musicId");
-  if (!_0x2f9b90) {
-    done();
-    return;
-  }
-  const _0x4e1854 = "http://nmobi.kuwo.cn/mobi.s?f=web&source=kwwear_ar_2.2.3_Fwatch.apk&type=convert_url_with_sign&rid=" + _0x2f9b90 + "&from=PC&br=2000kflac";
-  httpRequest(_0x4e1854, 3000).then(_0x32a739 => {
-    if (_0x32a739.statusCode === 200 && _0x32a739.body) {
-      const _0x33f69d = safeJsonParse(_0x32a739.body);
-      if (_0x33f69d?.["data"]?.["url"]) {
-        const _0x65fd44 = {
-          code: 200,
-          reqId: _0x33f69d.data?.["sig"] || generateRandomId(32),
-          data: {
-            format: "flac",
-            respCode: 200,
-            p2pAudioSourceId: _0x33f69d.data?.["p2p_audiosourceid"] || "",
-            audioHttpsUrl: _0x33f69d.data.url,
-            bitrate: _0x33f69d.data?.["bitrate"] || "2000k",
-            audioUrl: _0x33f69d.data.url
-          },
-          msg: "success",
-          profileId: "site",
-          curTime: Date.now()
-        };
-        done({
-          body: JSON.stringify(_0x65fd44)
-        });
-        return;
-      }
+    _0x334f95 += "ert";
+    _0x54a727 = encode_version;
+    if (!(typeof _0x54a727 !== "undefined" && _0x54a727 === "jsjiami.com.v5")) {
+      _0x6e2f39[_0x334f95]("删除版本号，js会定期弹窗，还请支持我们的工作");
     }
-    const _0x4c9e78 = {
-      body: $response.body
-    };
-    done(_0x4c9e78);
-  }).catch(() => {
-    const _0x5838a7 = {
-      body: $response.body
-    };
-    done(_0x5838a7);
-  });
-}
-function handleHomeModule() {
-  let _0x3bb710 = safeJsonParse($response.body);
-  if (!_0x3bb710) {
-    done();
-    return;
+  } catch (_0x2d7ea7) {
+    _0x6e2f39[_0x334f95]("删除版本号，js会定期弹窗");
   }
-  _0x3bb710.data = _0x3bb710.data || {};
-  const _0xdf2e5a = ["bannerList", "adList", "adInfo", "promotionList", "commercialList"];
-  _0xdf2e5a.forEach(_0x225295 => {
-    _0x3bb710.data[_0x225295] && delete _0x3bb710.data[_0x225295];
-  });
-  done({
-    body: JSON.stringify(_0x3bb710)
-  });
-}
-function handleVipPrice() {
-  let _0x5b7570 = safeJsonParse($response.body);
-  if (!_0x5b7570) {
-    done();
-    return;
-  }
-  _0x5b7570.data = _0x5b7570.data || {};
-  _0x5b7570.data.lowPriceText = "";
-  _0x5b7570.data.interval = 3600;
-  done({
-    body: JSON.stringify(_0x5b7570)
-  });
-}
-function safeJsonParse(_0x2130c3) {
-  try {
-    return JSON.parse(_0x2130c3);
-  } catch (_0x3d42d5) {
-    return null;
-  }
-}
-function generateRandomId(_0x3f7436) {
-  const _0x49899c = "abcdef0123456789";
-  let _0xd1784e = "";
-  for (let _0x26d202 = 0; _0x26d202 < _0x3f7436; _0x26d202++) {
-    _0xd1784e += _0x49899c.charAt(Math.floor(Math.random() * _0x49899c.length));
-  }
-  return _0xd1784e;
-}
-function getUrlParam(_0x4ce230, _0x7365cb) {
-  if (!_0x4ce230) {
-    return null;
-  }
-  const _0x305a7e = _0x4ce230.match(new RegExp(_0x7365cb + "=([^&]+)"));
-  return _0x305a7e ? decodeURIComponent(_0x305a7e[1]) : null;
-}
-function httpRequest(_0xf4a789, _0x25fb5a = 5000) {
-  return new Promise(_0x1d9043 => {
-    if (_0x47fa30.isQX) {
-      const _0x3ee1f7 = {
-        url: _0xf4a789,
-        timeout: _0x25fb5a
-      };
-      $task.fetch(_0x3ee1f7).then(_0x1d9043);
-    } else {
-      if (_0x47fa30.isLoon || _0x47fa30.isSurge) {
-        const _0x474d91 = {
-          url: _0xf4a789,
-          timeout: _0x25fb5a
-        };
-        $httpClient.get(_0x474d91, (_0x39045d, _0x4ab936, _0x37c274) => {
-          const _0x5b74b8 = {
-            statusCode: _0x39045d ? 500 : _0x4ab936.status || 200,
-            body: _0x39045d ? null : _0x37c274
-          };
-          _0x1d9043(_0x5b74b8);
-        });
-      } else {
-        const _0x17c7e4 = {
-          statusCode: 500,
-          body: null
-        };
-        _0x1d9043(_0x17c7e4);
-      }
-    }
-  });
-}
+})(window);
+encode_version = "jsjiami.com.v5";
